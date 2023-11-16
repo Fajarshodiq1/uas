@@ -51,6 +51,7 @@ const swiper = new Swiper(".swiper", {
     },
   },
 });
+
 // Create a ScrollReveal instance
 const scrollReveal = new ScrollReveal();
 
@@ -70,6 +71,13 @@ scrollReveal.reveal(".hero__img", {
   interval: 500,
 });
 scrollReveal.reveal(".stats__item", {
+  duration: 1000,
+  distance: "50px",
+  easing: "ease-in-out",
+  origin: "bottom",
+  interval: 500,
+});
+scrollReveal.reveal(".services__top", {
   duration: 1000,
   distance: "50px",
   easing: "ease-in-out",

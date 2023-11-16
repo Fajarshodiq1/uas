@@ -90,44 +90,37 @@
               <ul class="flex flex-col gap-y-5">
                 <li>
                   <a
-                    href="#"
+                    href="#home"
                     class="text-secondary hover:text-accent transition-all duration-300"
                     >Home</a
                   >
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="#stats"
                     class="text-secondary hover:text-accent transition-all duration-300"
-                    >Mentor</a
+                    >Statistic</a
                   >
                 </li>
                 <li>
                   <a
-                    href="#"
-                    class="text-secondary hover:text-accent transition-all duration-300"
-                    >Department</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
+                    href="#service"
                     class="text-secondary hover:text-accent transition-all duration-300"
                     >Service</a
                   >
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="#testimonial"
                     class="text-secondary hover:text-accent transition-all duration-300"
-                    >Blog</a
+                    >Testimonial</a
                   >
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="#blog"
                     class="text-secondary hover:text-accent transition-all duration-300"
-                    >Contact</a
+                    >Blog</a
                   >
                 </li>
               </ul>
@@ -153,49 +146,42 @@
             <ul class="flex gap-x-4">
               <li>
                 <a
-                  href="#"
+                  href="#home"
                   class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300"
                   >Home</a
                 >
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#stats"
                   class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300"
-                  >Mentor</a
+                  >Stats</a
                 >
               </li>
               <li>
                 <a
-                  href="#"
-                  class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300"
-                  >Department</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
+                  href="#service"
                   class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300"
                   >Service</a
                 >
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#testimonial"
                   class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300"
-                  >Blog</a
+                  >Testimoni</a
                 >
               </li>
               <li>
                 <a
-                  href="#"
-                  class="text-secondary hover:text-accent transition-all duration-300"
-                  >Contact</a
+                  href="#blog"
+                  class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300"
+                  >Blog</a
                 >
               </li>
             </ul>
             <!-- form -->
-            <form class="relative flex gap-x-[10px]">
+            <!-- <form class="relative flex gap-x-[10px]">
               <label
                 for="search-input"
                 class="flex justify-center items-center group"
@@ -208,14 +194,17 @@
                 placeholder="Search..."
                 class="outline-none w-[100px] focus:w-[180px] focus:border-b-2 focus:border-accent placeholder:italic placeholder:text-base transition-all duration-150"
               />
-            </form>
+            </form> -->
           </nav>
         </div>
       </div>
     </header>
 
     <!-- hero section-->
-    <section class="hero bg-grey py-12 xl:pt-12 xl:pb-0 overflow-hidden">
+    <section
+      id="home"
+      class="hero bg-grey py-12 xl:pt-12 xl:pb-0 overflow-hidden"
+    >
       <div class="container mx-auto h-full">
         <!-- text and image -->
         <div
@@ -246,9 +235,11 @@
               ipsum magnam voluptates corrupti pariatur tenetur
             </p>
             <!-- btn -->
-            <button class="btn btn-lg btn-accent mx-auto xl:mx-0">
-              Contact Us
-            </button>
+            <a href=" https://wa.me/+6285156710872">
+              <button class="btn btn-lg btn-accent mx-auto xl:mx-0">
+                Contact Us
+              </button>
+            </a>
           </div>
           <!-- image -->
           <div class="hero__img hidden xl:flex max-w-[814px] self-end">
@@ -260,7 +251,7 @@
     <!-- end hero -->
 
     <!-- stats -->
-    <section class="stats section mt-8 xl:mt-16">
+    <section id="stats" class="stats section mt-8 xl:mt-16">
       <div class="container mx-auto">
         <!-- wrapper -->
         <div class="flex flex-col xl:flex-row gap-y-6 justify-between">
@@ -302,7 +293,7 @@
     <!-- end stats -->
 
     <!-- service -->
-    <section class="services">
+    <section id="service" class="services">
       <!-- bg -->
       <div
         class="bg-accent bg-services bg-cover bg-no-repeat max-w-[1466px] mx-4 xl:mx-auto rounded-[20px] xl:pt-[70px] px-6 xl:px-0 relative h-[368px] flex items-center xl:items-start -z-10"
@@ -399,11 +390,12 @@
 
     <!-- testimonials -->
     <section
+      id="testimonial"
       class="testimonial bg-testimonials bg-cover bg-right bg-no-repeat py-12 xl:min-h-[595px] xl:py-0"
     >
       <div class="testimonial__container container mx-auto">
         <div class="text-center pt-4">
-          <p class="h2 text-blue-900 font-extrabold text-4xl">
+          <p class="h2 text-black text-3xl xl:text-5xl font-bold">
             Testimoni Alumni
           </p>
         </div>
@@ -427,7 +419,7 @@
                       >
                         <img
                           class="block mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0"
-                          src="/assets/img/hero/Screenshot_3.png"
+                          src="assets/img/hero/Screenshot_3.png"
                           alt="Woman's Face"
                         />
                         <div class="text-center space-y-2 sm:text-left">
@@ -483,7 +475,7 @@
                       >
                         <img
                           class="block mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0"
-                          src="/assets/img/hero/raihan_arya_syahputra_TUVAGGj.jpg"
+                          src="assets/img/hero/raihan_arya_syahputra_TUVAGGj.jpg"
                           alt="Woman's Face"
                         />
                         <div class="text-center space-y-2 sm:text-left">
@@ -536,7 +528,7 @@
                       >
                         <img
                           class="block mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0"
-                          src="/assets/img/hero/yesi.jpg"
+                          src="assets/img/hero/yesi.jpg"
                           alt="Woman's Face"
                         />
                         <div class="text-center space-y-2 sm:text-left">
@@ -590,7 +582,7 @@
                       >
                         <img
                           class="block mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0"
-                          src="/assets/img/hero/iejat.jpg"
+                          src="assets/img/hero/iejat.jpg"
                           alt="Woman's Face"
                         />
                         <div class="text-center space-y-2 sm:text-left">
@@ -647,6 +639,7 @@
 
     <!-- Pricing -->
     <section
+      id="Class"
       class="relative p-10 min-h-screen overflow-hidden pricing__container"
     >
       <div class="container mx-auto">
@@ -656,12 +649,12 @@
         ></div>
         <!-- headlines -->
         <div class="relative text-center mb-12 space-y-3">
-          <h2 class="text-5xl font-bold text-black">
+          <h2 class="text-3xl xl:text-5xl font-bold text-black">
             Rekomendasi Kursus di CodeLearn
           </h2>
         </div>
         <!-- pricing boxes -->
-        <div class="relative grid grid-cols-2 gap-4 xl:grid-cols-4">
+        <div class="relative grid grid-cols-1 gap-4 xl:grid-cols-4">
           <div
             class="bg-white p-8 border-t-4 border-blue-400 rounded-2xl shadow-xl"
           >
@@ -1019,12 +1012,16 @@
     </section>
     <!--end Pricing -->
     <!-- blog -->
-    <section class="blog">
+    <section id="blog" class="blog">
       <div class="container mx-auto">
-        <h2 class="blog__title h2 mb-[50px] text-center">Seputar teknologi</h2>
+        <h2
+          class="blog__title text-3xl xl:text-5xl font-bold mb-[50px] text-center"
+        >
+          Seputar teknologi
+        </h2>
         <!-- blog post-->
         <div
-          class="grid grid-cols-2 gap-4 xl:grid-cols-4 gap-y-6 xl:gap-y-0 items-center xl:justify-between mb-[50px]"
+          class="grid grid-cols-1 sm:grid-cols-2 gap-4 xl:grid-cols-4 gap-y-6 xl:gap-y-0 items-center xl:justify-between mb-[50px]"
         >
           <!-- post 1-->
           <div
@@ -1237,7 +1234,11 @@
     <!-- brands -->
     <section class="brands section">
       <div class="container mx-auto">
-        <h2 class="blog__brands h2 mb-[50px] text-center">Di dukung oleh:</h2>
+        <h2
+          class="blog__brands text-3xl xl:text-5xl font-bold mb-[50px] text-center"
+        >
+          Di dukung oleh:
+        </h2>
         <div
           class="flex flex-col xl:flex-row gap-y-12 xl:gap-y-0 justify-between items-center"
         >
@@ -1275,50 +1276,42 @@
         <nav class="flex flex-wrap justify-center -mx-5 -my-2">
           <div class="px-5 py-2">
             <a
-              href="#"
+              href="#home"
               class="text-base leading-6 text-gray-500 hover:text-gray-900"
             >
-              About
+              Home
             </a>
           </div>
           <div class="px-5 py-2">
             <a
-              href="#"
+              href="#stats"
+              class="text-base leading-6 text-gray-500 hover:text-gray-900"
+            >
+              Statistic
+            </a>
+          </div>
+          <div class="px-5 py-2">
+            <a
+              href="#service"
+              class="text-base leading-6 text-gray-500 hover:text-gray-900"
+            >
+              Service
+            </a>
+          </div>
+          <div class="px-5 py-2">
+            <a
+              href="#testimonial"
+              class="text-base leading-6 text-gray-500 hover:text-gray-900"
+            >
+              Testimonial
+            </a>
+          </div>
+          <div class="px-5 py-2">
+            <a
+              href="#blog"
               class="text-base leading-6 text-gray-500 hover:text-gray-900"
             >
               Blog
-            </a>
-          </div>
-          <div class="px-5 py-2">
-            <a
-              href="#"
-              class="text-base leading-6 text-gray-500 hover:text-gray-900"
-            >
-              Team
-            </a>
-          </div>
-          <div class="px-5 py-2">
-            <a
-              href="#"
-              class="text-base leading-6 text-gray-500 hover:text-gray-900"
-            >
-              Pricing
-            </a>
-          </div>
-          <div class="px-5 py-2">
-            <a
-              href="#"
-              class="text-base leading-6 text-gray-500 hover:text-gray-900"
-            >
-              Contact
-            </a>
-          </div>
-          <div class="px-5 py-2">
-            <a
-              href="#"
-              class="text-base leading-6 text-gray-500 hover:text-gray-900"
-            >
-              Terms
             </a>
           </div>
         </nav>
@@ -1398,7 +1391,7 @@
           </a>
         </div>
         <p class="mt-8 text-base leading-6 text-center text-gray-400">
-          © 2021 SomeCompany, Inc. All rights reserved.
+          Copyright ©2023 codeLearn. All right reserved
         </p>
       </div>
     </section>
