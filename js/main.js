@@ -30,6 +30,15 @@ const swiper = new Swiper(".swiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  loop: true,
   on: {
     slideChangeTransitionEnd: function () {
       const isFirstSlide = this.isBeginning;
@@ -85,6 +94,62 @@ scrollReveal.reveal(".services__top", {
   interval: 500,
 });
 scrollReveal.reveal(".services__top", {
+  duration: 1000,
+  distance: "50px",
+  easing: "ease-in-out",
+  origin: "bottom",
+  interval: 500,
+});
+scrollReveal.reveal(".services__item", {
+  duration: 1000,
+  distance: "50px",
+  easing: "ease-in-out",
+  origin: "bottom",
+  interval: 500,
+});
+scrollReveal.reveal(".testimonial__container", {
+  duration: 1000,
+  distance: "50px",
+  easing: "ease-in-out",
+  origin: "bottom",
+  interval: 500,
+});
+scrollReveal.reveal(".pricing__title", {
+  duration: 1000,
+  distance: "50px",
+  easing: "ease-in-out",
+  origin: "bottom",
+  interval: 500,
+});
+scrollReveal.reveal(".pricing__blog", {
+  duration: 1000,
+  distance: "50px",
+  easing: "ease-in-out",
+  origin: "bottom",
+  interval: 500,
+});
+scrollReveal.reveal(".blog__title", {
+  duration: 1000,
+  distance: "50px",
+  easing: "ease-in-out",
+  origin: "bottom",
+  interval: 500,
+});
+scrollReveal.reveal(".blog__post", {
+  duration: 1000,
+  distance: "50px",
+  easing: "ease-in-out",
+  origin: "bottom",
+  interval: 500,
+});
+scrollReveal.reveal(".brands__title", {
+  duration: 1000,
+  distance: "50px",
+  easing: "ease-in-out",
+  origin: "bottom",
+  interval: 500,
+});
+scrollReveal.reveal(".brands__img", {
   duration: 1000,
   distance: "50px",
   easing: "ease-in-out",

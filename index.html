@@ -627,6 +627,9 @@
                     </div>
                   </div>
                 </div>
+                <!-- Navigation arrows -->
+                <div class="swiper-button-next"></div>
+
                 <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
               </div>
@@ -638,10 +641,7 @@
     <!-- end testimonials -->
 
     <!-- Pricing -->
-    <section
-      id="Class"
-      class="relative p-10 min-h-screen overflow-hidden pricing__container"
-    >
+    <section id="Class" class="relative p-10 min-h-screen overflow-hidden">
       <div class="container mx-auto">
         <!-- gray diagonal thingy -->
         <div
@@ -649,14 +649,14 @@
         ></div>
         <!-- headlines -->
         <div class="relative text-center mb-12 space-y-3">
-          <h2 class="text-3xl xl:text-5xl font-bold text-black">
+          <h2 class="text-3xl xl:text-5xl font-bold text-black pricing__title">
             Rekomendasi Kursus di CodeLearn
           </h2>
         </div>
         <!-- pricing boxes -->
         <div class="relative grid grid-cols-1 gap-4 xl:grid-cols-4">
           <div
-            class="bg-white p-8 border-t-4 border-blue-400 rounded-2xl shadow-xl"
+            class="bg-white p-8 border-t-4 border-blue-400 rounded-2xl shadow-xl pricing__blog"
           >
             <!-- pricing header -->
             <div class="mb-10 space-y-2">
@@ -706,7 +706,7 @@
             </button>
           </div>
           <div
-            class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-blue-400"
+            class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-blue-400 pricing__blog"
           >
             <!-- pricing header -->
             <div class="mb-10 space-y-2">
@@ -756,7 +756,7 @@
             </button>
           </div>
           <div
-            class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-blue-400"
+            class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-blue-400 pricing__blog"
           >
             <!-- pricing header -->
             <div class="mb-10 space-y-2">
@@ -806,7 +806,7 @@
             </button>
           </div>
           <div
-            class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-blue-400"
+            class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-blue-400 pricing__blog"
           >
             <!-- pricing header -->
             <div class="mb-10 space-y-2">
@@ -856,7 +856,7 @@
             </button>
           </div>
           <div
-            class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-blue-400"
+            class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-blue-400 pricing__blog"
           >
             <!-- pricing header -->
             <div class="mb-10 space-y-2">
@@ -906,7 +906,7 @@
             </button>
           </div>
           <div
-            class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-blue-400"
+            class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-blue-400 pricing__blog"
           >
             <!-- pricing header -->
             <div class="mb-10 space-y-2">
@@ -956,7 +956,7 @@
             </button>
           </div>
           <div
-            class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-blue-400"
+            class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-blue-400 pricing__blog"
           >
             <!-- pricing header -->
             <div class="mb-10 space-y-2">
@@ -1064,7 +1064,7 @@
             <!-- img -->
             <div class="relative overflow-hidden">
               <img
-                src="assets/img/hero/sql.jpg"
+                src="assets/img/hero/mongo.webp"
                 alt=""
                 class="group hover:scale-110 transition-all duration-500 w-full"
               />
@@ -1072,7 +1072,7 @@
               <div
                 class="bg-accent-tertiary absolute bottom-0 left-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]"
               >
-                Data
+                Database
               </div>
             </div>
             <!-- text -->
@@ -1080,13 +1080,12 @@
               <!-- date -->
               <div class="mb-4">Jan 2, 2020</div>
               <!-- title -->
-              <h4 class="h4 mb-[10px]">
-                Apa itu Database PostgreSQL dan Funsinya
-              </h4>
+              <h4 class="h4 mb-[10px]">Apa Itu MongoDB?</h4>
               <!-- desc -->
               <p class="font-light">
-                Kemampuan mengolah data dalam sebuah sistem atau jaringan
-                komputer merupakan hal yang sangat penting. Untuk...
+                Bila kalian tertarik dengan dunia pemrograman atau juga dunia
+                pengolahan data, maka MongoDB ini adalah satu hal yang harus
+                kalian pelajari. MongoDB adalah salah satu…
                 <a href="" class="italic underline text-[#4c5354]">Read more</a>
               </p>
             </div>
@@ -1098,7 +1097,7 @@
             <!-- img -->
             <div class="relative overflow-hidden">
               <img
-                src="assets/img/hero/docker.jpg"
+                src="assets/img/hero/autentikasi.jpg"
                 alt=""
                 class="group hover:scale-110 transition-all duration-500 w-full"
               />
@@ -1106,7 +1105,7 @@
               <div
                 class="bg-accent-tertiary absolute bottom-0 left-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]"
               >
-                Programming
+                Cybersecurity
               </div>
             </div>
             <!-- text -->
@@ -1114,13 +1113,12 @@
               <!-- date -->
               <div class="mb-4">Jan 2, 2020</div>
               <!-- title -->
-              <h4 class="h4 mb-[10px]">
-                Apa Itu Docker? Pengertian, Fungsi dan Cara Kerjanya
-              </h4>
+              <h4 class="h4 mb-[10px]">Apa itu Autentikasi?</h4>
               <!-- desc -->
               <p class="font-light">
-                Docker adalah aplikasi yang dipakai untuk mengemas sejumlah file
-                software ke unit yang disebut dengan...
+                Autentikasi adalah proses verifikasi terhadap data-data tertentu
+                agar dapat menjamin keamanan suatu akun. Dengan sistem kerja
+                yang mutakhir, autentikasi sekarang ini...
                 <a href="" class="italic underline text-[#4c5354]">Read more</a>
               </p>
             </div>
@@ -1132,7 +1130,7 @@
             <!-- img -->
             <div class="relative overflow-hidden">
               <img
-                src="assets/img/hero/ict.jpg"
+                src="assets/img/hero/flutter.webp"
                 alt=""
                 class="group hover:scale-110 transition-all duration-500 w-full"
               />
@@ -1140,7 +1138,7 @@
               <div
                 class="bg-accent-tertiary absolute bottom-0 left-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]"
               >
-                Programming
+                Mobile APp developer
               </div>
             </div>
             <!-- text -->
@@ -1148,13 +1146,11 @@
               <!-- date -->
               <div class="mb-4">Jan 2, 2020</div>
               <!-- title -->
-              <h4 class="h4 mb-[10px]">
-                Mengenal Apa Itu ICT? Pengertian dan Fungsinya
-              </h4>
+              <h4 class="h4 mb-[10px]">6 Cara Mudah Belajar Flutter</h4>
               <!-- desc -->
               <p class="font-light">
-                Docker adalah aplikasi yang dipakai untuk mengemas sejumlah file
-                software ke unit yang disebut dengan...
+                Flutter adalah sebuah software pengembangan yang dipakai untuk
+                kebutuhan pengembangan aplikasi multi atau cross platform...
                 <a href="" class="italic underline text-[#4c5354]">Read more</a>
               </p>
             </div>
@@ -1166,7 +1162,7 @@
             <!-- img -->
             <div class="relative overflow-hidden">
               <img
-                src="assets/img/hero/docker.jpg"
+                src="assets/img/hero/swift.webp"
                 alt=""
                 class="group hover:scale-110 transition-all duration-500 w-full"
               />
@@ -1174,7 +1170,7 @@
               <div
                 class="bg-accent-tertiary absolute bottom-0 left-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]"
               >
-                Programming
+                Mobile App Developer
               </div>
             </div>
             <!-- text -->
@@ -1183,12 +1179,12 @@
               <div class="mb-4">Jan 2, 2020</div>
               <!-- title -->
               <h4 class="h4 mb-[10px]">
-                Apa Itu Docker? Pengertian, Fungsi dan Cara Kerjanya
+                Mengenal Bahasa Pemrograman Swift untuk Aplikasi Apple
               </h4>
               <!-- desc -->
               <p class="font-light">
-                Docker adalah aplikasi yang dipakai untuk mengemas sejumlah file
-                software ke unit yang disebut dengan...
+                Melihat perkembangan teknologi saat ini membuat semakin banyak
+                juga kesempatan terbuka untuk meniti karir...
                 <a href="" class="italic underline text-[#4c5354]">Read more</a>
               </p>
             </div>
@@ -1200,7 +1196,7 @@
             <!-- img -->
             <div class="relative overflow-hidden">
               <img
-                src="assets/img/hero/docker.jpg"
+                src="assets/img/hero/reinforcement.webp"
                 alt=""
                 class="group hover:scale-110 transition-all duration-500 w-full"
               />
@@ -1208,7 +1204,72 @@
               <div
                 class="bg-accent-tertiary absolute bottom-0 left-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]"
               >
-                Programming
+                Data Science
+              </div>
+            </div>
+            <!-- text -->
+            <div class="px-5 py-6">
+              <!-- date -->
+              <div class="mb-4">Jan 2, 2020</div>
+              <!-- title -->
+              <h4 class="h4 mb-[10px]">Apa itu Reinforcement Learning</h4>
+              <!-- desc -->
+              <p class="font-light">
+                RL atau Reinforcement learning merupakan penerapan machine
+                learning, sistem ini mengoptimalkan sistem tertentu. Sistem
+                tersebut...
+                <a href="" class="italic underline text-[#4c5354]">Read more</a>
+              </p>
+            </div>
+          </div>
+          <!-- post 3-->
+          <div
+            class="blog__post max-w-[420px] shadow-lg rounded-[10px] overflow-hidden cursor-pointer group"
+          >
+            <!-- img -->
+            <div class="relative overflow-hidden">
+              <img
+                src="assets/img/hero/crm.webp"
+                alt=""
+                class="group hover:scale-110 transition-all duration-500 w-full"
+              />
+              <!-- badge -->
+              <div
+                class="bg-accent-tertiary absolute bottom-0 left-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]"
+              >
+                Digital Marketing
+              </div>
+            </div>
+            <!-- text -->
+            <div class="px-5 py-6">
+              <!-- date -->
+              <div class="mb-4">Jan 2, 2020</div>
+              <!-- title -->
+              <h4 class="h4 mb-[10px]">Apa Itu CRM?</h4>
+              <!-- desc -->
+              <p class="font-light">
+                CRM adalah pendekatan pada bisnis yang dipakai oleh perusahaan
+                bertujuan untuk meningkatkan hubungan dengan pelanggan. CRM...
+                <a href="" class="italic underline text-[#4c5354]">Read more</a>
+              </p>
+            </div>
+          </div>
+          <!-- post 3-->
+          <div
+            class="blog__post max-w-[420px] shadow-lg rounded-[10px] overflow-hidden cursor-pointer group"
+          >
+            <!-- img -->
+            <div class="relative overflow-hidden">
+              <img
+                src="assets/img/hero/writter.webp"
+                alt=""
+                class="group hover:scale-110 transition-all duration-500 w-full"
+              />
+              <!-- badge -->
+              <div
+                class="bg-accent-tertiary absolute bottom-0 left-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]"
+              >
+                Digital Marketing
               </div>
             </div>
             <!-- text -->
@@ -1217,12 +1278,13 @@
               <div class="mb-4">Jan 2, 2020</div>
               <!-- title -->
               <h4 class="h4 mb-[10px]">
-                Apa Itu Docker? Pengertian, Fungsi dan Cara Kerjanya
+                Apa Itu UX Writer? Penjelasan, Tugas dan Contohnya
               </h4>
               <!-- desc -->
               <p class="font-light">
-                Docker adalah aplikasi yang dipakai untuk mengemas sejumlah file
-                software ke unit yang disebut dengan...
+                UX writer adalah singkatan dari User Experience, yaitu seseorang
+                yang tertugas membuat UX copy di produk digital seperti
+                contohnya...
                 <a href="" class="italic underline text-[#4c5354]">Read more</a>
               </p>
             </div>
@@ -1235,7 +1297,7 @@
     <section class="brands section">
       <div class="container mx-auto">
         <h2
-          class="blog__brands text-3xl xl:text-5xl font-bold mb-[50px] text-center"
+          class="brands__title text-3xl xl:text-5xl font-bold mb-[50px] text-center"
         >
           Di dukung oleh:
         </h2>
@@ -1243,22 +1305,22 @@
           class="flex flex-col xl:flex-row gap-y-12 xl:gap-y-0 justify-between items-center"
         >
           <img
-            class="brands__logo w-[250px]"
+            class="brands__logo w-[250px] brands__img"
             src="assets/img/hero/dicoding.png"
             alt=""
           />
           <img
-            class="brands__logo w-[250px]"
+            class="brands__logo w-[250px] brands__img"
             src="assets/img/hero/gdsc.png"
             alt=""
           />
           <img
-            class="brands__logo w-[250px]"
-            src="assets/img/hero/logohimasi.png"
+            class="brands__logo w-[250px] brands__img"
+            src="assets/img/hero/himasiii.png"
             alt=""
           />
           <img
-            class="brands__logo"
+            class="brands__logo brands__img"
             src="assets/img/hero/inkanten-removebg-preview.png"
             alt=""
           />
