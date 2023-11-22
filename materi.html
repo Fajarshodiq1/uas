@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css -->
+    <link rel="stylesheet" href="dist/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.min.css"
+    />  
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- swipper css -->
+    <link rel="stylesheet" href="src/swiper-bundle.min.css" />
+    <title>Document</title>
+    <style>
+      .modal {
+        transition: opacity 0.25s ease;
+      }
+      body.modal-active {
+        overflow-x: hidden;
+        overflow-y: visible !important;
+      }
+    </style>
+  </head>
+  <body class="bg-white font-sans leading-normal tracking-normal">
+    <nav id="header" class="fixed w-full z-10 top-0">
+      <div
+        id="progress"
+        class="h-1 z-20 top-0"
+        style="
+          background: linear-gradient(
+            to right,
+            #4dc0b5 var(--scroll),
+            transparent 0
+          );
+        "
+      ></div>
+
+      <div
+        class="w-full md:max-w-4xl mx-auto flex flex-wrap items-center justify-between mt-0 py-3"
+      >
+        <div class="pl-4">
+          <a
+            class="text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl"
+            href="#"
+          >
+            CodeLearn
+          </a>
+        </div>
+
+        <div class="block lg:hidden pr-4">
+          <button
+            id="nav-toggle"
+            class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-green-500 appearance-none focus:outline-none"
+          >
+            <svg
+              class="fill-current h-3 w-3"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>
+        </div>
+
+        <div
+          class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-gray-100 md:bg-transparent z-20"
+          id="nav-content"
+        >
+          <ul class="list-reset lg:flex justify-end flex-1 items-center">
+            <li class="mr-3">
+              <a
+                class="inline-block py-2 px-4 text-gray-900 font-bold no-underline"
+                href="#"
+                ><i class="ri-contract-left-line text-2xl"></i
+              ></a>
+            </li>
+            <li class="mr-3">
+              <a
+                class="modal-open inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4"
+                href="#"
+                ><i class="ri-user-line text-2xl"></i
+              ></a>
+              <!--Modal-->
+              <div
+                class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center"
+              >
+                <div
+                  class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"
+                ></div>
+
+                <div
+                  class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto"
+                >
+                  <div
+                    class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50"
+                  >
+                    <svg
+                      class="fill-current text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                    >
+                      <path
+                        d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"
+                      ></path>
+                    </svg>
+                    <span class="text-sm">(Esc)</span>
+                  </div>
+
+                  <!-- Add margin if you want to see some of the overlay behind the modal-->
+                  <div class="modal-content py-4 text-left px-6">
+                    <!--Title-->
+                    <div class="flex justify-between items-center pb-3">
+                      <p class="text-2xl font-bold">Profile</p>
+                      <div class="modal-close cursor-pointer z-50">
+                        <svg
+                          class="fill-current text-black"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                        >
+                          <path
+                            d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+
+                    <!--Body-->
+                    <div
+                      class="py-8 px-8 max-w-sm mx-auto bg-white space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6"
+                    >
+                      <img
+                        class="block mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0"
+                        src="assets/img/hero/iejat.jpg"
+                        alt="Woman's Face"
+                      />
+                      <div class="text-center space-y-2 sm:text-left">
+                        <div class="space-y-0.5">
+                          <p class="text-lg text-black font-semibold">
+                            Izzaturamadhan
+                          </p>
+                          <p class="text-slate-500 font-medium">
+                            @Izzaturamadhan
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div></div>
+                    <!--Footer-->
+                    <div class="flex justify-end pt-2">
+                      <button
+                        class="px-4 bg-transparent p-3 rounded-lg text-indigo-500 hover:bg-gray-100 hover:text-indigo-400 mr-2"
+                      >
+                        log-out
+                      </button>
+                      <button
+                        class="modal-close px-4 bg-indigo-500 p-3 rounded-lg text-white hover:bg-indigo-400"
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+         
+              <script>
+                var openmodal = document.querySelectorAll(".modal-open");
+                for (var i = 0; i < openmodal.length; i++) {
+                  openmodal[i].addEventListener("click", function (event) {
+                    event.preventDefault();
+                    toggleModal();
+                  });
+                }
+
+                const overlay = document.querySelector(".modal-overlay");
+                overlay.addEventListener("click", toggleModal);
+
+                var closemodal = document.querySelectorAll(".modal-close");
+                for (var i = 0; i < closemodal.length; i++) {
+                  closemodal[i].addEventListener("click", toggleModal);
+                }
+
+                document.onkeydown = function (evt) {
+                  evt = evt || window.event;
+                  var isEscape = false;
+                  if ("key" in evt) {
+                    isEscape = evt.key === "Escape" || evt.key === "Esc";
+                  } else {
+                    isEscape = evt.keyCode === 27;
+                  }
+                  if (
+                    isEscape &&
+                    document.body.classList.contains("modal-active")
+                  ) {
+                    toggleModal();
+                  }
+                };
+
+                function toggleModal() {
+                  const body = document.querySelector("body");
+                  const modal = document.querySelector(".modal");
+                  modal.classList.toggle("opacity-0");
+                  modal.classList.toggle("pointer-events-none");
+                  body.classList.toggle("modal-active");
+                }
+              </script>
+          
+        </div>
+      </div>
+    </nav>
+
+    <!--Container-->
+    <div class="container w-full md:max-w-3xl mx-auto pt-20">
+      <div
+        class="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal"
+        style="font-family: Georgia, serif"
+      >
+        <!--Title-->
+        <div class="font-sans">
+          <p class="text-base md:text-sm text-green-500 font-bold">
+            &lt;
+            <a
+              href="#"
+              class="text-base md:text-sm text-green-500 font-bold no-underline hover:underline"
+              >BACK TO BLOG</a
+            >
+          </p>
+          <h1
+            class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl"
+          >
+            Fundamental Front-End Web Development I
+          </h1>
+          <p class="text-sm md:text-base font-normal text-gray-600">
+            Published 19 February 2023
+          </p>
+        </div>
+
+        <!--Post Content-->
+
+        <!--Lead Para-->
+        <p class="py-6 justify-center">
+          👋 Hallo Semua Selamat Datang di Codelearn
+          <a
+            class="text-green-500 no-underline hover:underline"
+            href="https://www.tailwindcss.com"
+            >Tailwind CSS</a
+          >
+          Belajar front end web development penting karena tampilan dan
+          interaksi pengguna adalah aspek penting dari pengalaman pengguna yang
+          baik. Front end development mencakup semua elemen yang dilihat dan
+          digunakan oleh pengguna akhir. Keterampilan dalam mengembangkan
+          tampilan yang menarik dan fungsional dapat meningkatkan kehadiran
+          online perusahaan dan membantu meningkatkan citra merek mereka.
+        </p>
+
+        <p class="py-6">
+          Selain itu, front end web development juga memainkan peran penting
+          dalam optimasi mesin pencari (SEO). Mesin pencari menggunakan
+          algoritma untuk menentukan peringkat situs web dalam hasil pencarian.
+          Pengembang front end dapat membantu meningkatkan peringkat SEO dengan
+          memperbaiki kinerja dan kecepatan situs web, serta mengoptimalkan tag
+          dan metadata untuk memastikan situs web mudah dicari oleh mesin
+          pencari.
+        </p>
+
+        <p class="py-6">
+          Kemampuan untuk membangun tampilan yang responsif dan ramah seluler
+          sangat penting dalam dunia digital saat ini. Banyak pengguna mengakses
+          web melalui perangkat seluler, dan pengembang web perlu memastikan
+          situs web mereka dapat diakses dengan baik melalui berbagai perangkat.
+          Front end web development memungkinkan pengembang web untuk
+          menciptakan pengalaman interaktif yang menarik dan menyenangkan bagi
+          pengguna, serta memungkinkan situs web untuk mengikuti tren terbaru
+          dalam desain web dan teknologi interaktif.
+        </p>
+
+        <blockquote
+          class="border-l-4 border-green-500 italic my-8 pl-8 md:pl-12"
+        >
+          Keterampilan front end web development sangat diminati di industri
+          teknologi saat ini. Industri ini selalu berkembang pesat dan mencari
+          orang-orang yang dapat menciptakan pengalaman pengguna yang hebat.
+          Sebagai hasilnya, keterampilan front end web development dapat membuka
+          peluang karir yang menarik dan menguntungkan bagi para pengembang web.
+          Selain itu, keterampilan ini juga dapat membantu dalam membangun
+          portofolio dan menciptakan proyek-proyek web yang menarik.
+        </blockquote>
+        <!-- 
+        <p class="py-6">Example code block:</p>
+        <pre
+          class="bg-gray-900 rounded text-white font-mono text-base p-2 md:p-4"
+        >
+          <code class="break-words whitespace-pre-wrap">
+  &lt;header class="site-header outer"&gt;
+  &lt;div class="inner"&gt;
+  {{&gt; "site-nav"}}
+  &lt;/div&gt;
+  &lt;/header&gt;
+          </code>
+        </pre> -->
+
+        <!--/ Post Content-->
+      </div>
+
+      <!--Tags -->
+      <div class="text-base md:text-sm text-gray-500 px-4 py-6">
+        Tags:
+        <a
+          href="#"
+          class="text-base md:text-sm text-green-500 no-underline hover:underline"
+          >Link</a
+        >
+        .
+        <a
+          href="#"
+          class="text-base md:text-sm text-green-500 no-underline hover:underline"
+          >Link</a
+        >
+      </div>
+
+      <!--Divider-->
+      <hr class="border-b-2 border-gray-400 mb-8 mx-4" />
+
+      <!--Author-->
+      <div class="flex w-full items-center font-sans px-4 py-12">
+        <img
+          class="w-10 h-10 rounded-full mr-4"
+          src="assets/img/hero/logo-2582748_1280.webp"
+          alt="Avatar of Author"
+        />
+        <div class="flex-1 px-2">
+          <p class="text-base font-bold text-base md:text-xl leading-none mb-2">
+            HTML
+          </p>
+        </div>
+        <div class="justify-end">
+          <button
+            class="bg-transparent border border-gray-500 hover:border-green-500 text-xs text-gray-500 hover:text-green-500 font-bold py-2 px-4 rounded-full"
+          >
+            Read More
+          </button>
+        </div>
+      </div>
+      <div class="flex w-full items-center font-sans px-4 py-12">
+        <img
+          class="w-10 h-10 rounded-full mr-4"
+          src="assets/img/hero/css.png"
+          alt="Avatar of Author"
+        />
+        <div class="flex-1 px-2">
+          <p class="text-base font-bold text-base md:text-xl leading-none mb-2">
+            CSS
+          </p>
+        </div>
+        <div class="justify-end">
+          <button
+            class="bg-transparent border border-gray-500 hover:border-green-500 text-xs text-gray-500 hover:text-green-500 font-bold py-2 px-4 rounded-full"
+          >
+            Read More
+          </button>
+        </div>
+      </div>
+      <div class="flex w-full items-center font-sans px-4 py-12">
+        <img
+          class="w-10 h-10 rounded-full mr-4"
+          src="assets/img/hero/js.png"
+          alt="Avatar of Author"
+        />
+        <div class="flex-1 px-2">
+          <p class="text-base font-bold text-base md:text-xl leading-none mb-2">
+            Javascript
+          </p>
+        </div>
+        <div class="justify-end">
+          <button
+            class="bg-transparent border border-gray-500 hover:border-green-500 text-xs text-gray-500 hover:text-green-500 font-bold py-2 px-4 rounded-full"
+          >
+            Read More
+          </button>
+        </div>
+      </div>
+      <div class="flex w-full items-center font-sans px-4 py-12">
+        <img
+          class="w-10 h-10 rounded-full mr-4"
+          src="assets/img/hero/tailwind.jpg"
+          alt="Avatar of Author"
+        />
+        <div class="flex-1 px-2">
+          <p class="text-base font-bold text-base md:text-xl leading-none mb-2">
+            Tailwind CSS
+          </p>
+        </div>
+        <div class="justify-end">
+          <button
+            class="bg-transparent border border-gray-500 hover:border-green-500 text-xs text-gray-500 hover:text-green-500 font-bold py-2 px-4 rounded-full"
+          >
+            Read More
+          </button>
+        </div>
+      </div>
+      <div class="flex w-full items-center font-sans px-4 py-12">
+        <img
+          class="w-10 h-10 rounded-full mr-4"
+          src="assets/img/hero/quizz.jpg.crdownload"
+          alt="Avatar of Author"
+        />
+        <div class="flex-1 px-2">
+          <p class="text-base font-bold text-base md:text-xl leading-none mb-2">
+            Quiz
+          </p>
+        </div>
+        <div class="justify-end">
+          <button
+            class="bg-transparent border border-gray-500 hover:border-green-500 text-xs text-gray-500 hover:text-green-500 font-bold py-2 px-4 rounded-full"
+          >
+            Read More
+          </button>
+        </div>
+      </div>
+      <!--/Author-->
+
+      <!--Divider-->
+      <hr class="border-b-2 border-gray-400 mb-8 mx-4" />
+
+      <!--Next & Prev Links-->
+      <div class="font-sans flex justify-between content-center px-4 pb-12">
+        <div class="text-left">
+          <span class="text-xs md:text-sm font-normal text-gray-600"
+            >&lt; Previous Post</span
+          ><br />
+          <p>
+            <a
+              href="#"
+              class="break-normal text-base md:text-sm text-green-500 font-bold no-underline hover:underline"
+              >Blog title</a
+            >
+          </p>
+        </div>
+        <div class="text-right">
+          <span class="text-xs md:text-sm font-normal text-gray-600"
+            >Next Post &gt;</span
+          ><br />
+          <p>
+            <a
+              href="#"
+              class="break-normal text-base md:text-sm text-green-500 font-bold no-underline hover:underline"
+              >Blog title</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <!--/Next & Prev Links-->
+    </div>
+    <!--/container-->
+
+    <footer class="bg-white border-t border-gray-400 shadow">
+      <div class="container max-w-4xl mx-auto flex py-8">
+        <div class="w-full mx-auto flex flex-wrap">
+          <div class="flex w-full md:w-1/2">
+            <div class="px-8">
+              <h3 class="font-bold text-gray-900">About</h3>
+              <p class="py-4 text-gray-600 text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Maecenas vel mi ut felis tempus commodo nec id erat. Suspendisse
+                consectetur dapibus velit ut lacinia.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex w-full md:w-1/2">
+            <div class="px-8">
+              <h3 class="font-bold text-gray-900">Social</h3>
+              <ul class="list-reset items-center text-sm pt-3">
+                <li>
+                  <a
+                    class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1"
+                    href="#"
+                    >Add social link</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1"
+                    href="#"
+                    >Add social link</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1"
+                    href="#"
+                    >Add social link</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      /* Progress bar */
+      //Source: https://alligator.io/js/progress-bar-javascript-css-variables/
+      var h = document.documentElement,
+        b = document.body,
+        st = "scrollTop",
+        sh = "scrollHeight",
+        progress = document.querySelector("#progress"),
+        scroll;
+      var scrollpos = window.scrollY;
+      var header = document.getElementById("header");
+      var navcontent = document.getElementById("nav-content");
+
+      document.addEventListener("scroll", function () {
+        /*Refresh scroll % width*/
+        scroll = ((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100;
+        progress.style.setProperty("--scroll", scroll + "%");
+
+        /*Apply classes for slide in bar*/
+        scrollpos = window.scrollY;
+
+        if (scrollpos > 10) {
+          header.classList.add("bg-white");
+          header.classList.add("shadow");
+          navcontent.classList.remove("bg-gray-100");
+          navcontent.classList.add("bg-white");
+        } else {
+          header.classList.remove("bg-white");
+          header.classList.remove("shadow");
+          navcontent.classList.remove("bg-white");
+          navcontent.classList.add("bg-gray-100");
+        }
+      });
+
+      //Javascript to toggle the menu
+      document.getElementById("nav-toggle").onclick = function () {
+        document.getElementById("nav-content").classList.toggle("hidden");
+      };
+    </script>
+  </body>
+</html>
