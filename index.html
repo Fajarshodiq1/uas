@@ -1067,7 +1067,11 @@
               <p class="font-light">
                 Dengan perkembangan zaman, setiap orang dituntut untuk dapat
                 mengikuti kemajuan ilmu pengetahuan. Hal ini juga...
-                <a href="" class="italic underline text-[#4c5354]">Read more</a>
+                <a
+                  href="/atikel/artikel.html"
+                  class="italic underline text-[#4c5354]"
+                  >Read more</a
+                >
               </p>
             </div>
           </div>
@@ -1100,7 +1104,11 @@
                 Bila kalian tertarik dengan dunia pemrograman atau juga dunia
                 pengolahan data, maka MongoDB ini adalah satu hal yang harus
                 kalian pelajari. MongoDB adalah salah satu…
-                <a href="" class="italic underline text-[#4c5354]">Read more</a>
+                <a
+                  href="/atikel/artikel2.html"
+                  class="italic underline text-[#4c5354]"
+                  >Read more</a
+                >
               </p>
             </div>
           </div>
@@ -1133,7 +1141,11 @@
                 Autentikasi adalah proses verifikasi terhadap data-data tertentu
                 agar dapat menjamin keamanan suatu akun. Dengan sistem kerja
                 yang mutakhir, autentikasi sekarang ini...
-                <a href="" class="italic underline text-[#4c5354]">Read more</a>
+                <a
+                  href="/atikel/artikel3.html"
+                  class="italic underline text-[#4c5354]"
+                  >Read more</a
+                >
               </p>
             </div>
           </div>
@@ -1165,7 +1177,11 @@
               <p class="font-light">
                 Flutter adalah sebuah software pengembangan yang dipakai untuk
                 kebutuhan pengembangan aplikasi multi atau cross platform...
-                <a href="" class="italic underline text-[#4c5354]">Read more</a>
+                <a
+                  href="/atikel/artikel4.html"
+                  class="italic underline text-[#4c5354]"
+                  >Read more</a
+                >
               </p>
             </div>
           </div>
@@ -1199,7 +1215,11 @@
               <p class="font-light">
                 Melihat perkembangan teknologi saat ini membuat semakin banyak
                 juga kesempatan...
-                <a href="" class="italic underline text-[#4c5354]">Read more</a>
+                <a
+                  href="/atikel/artikel5.html"
+                  class="italic underline text-[#4c5354]"
+                  >Read more</a
+                >
               </p>
             </div>
           </div>
@@ -1231,7 +1251,11 @@
               <p class="font-light">
                 RL atau Reinforcement learning merupakan penerapan machine
                 learning, sistem ini...
-                <a href="" class="italic underline text-[#4c5354]">Read more</a>
+                <a
+                  href="/atikel/artikel6.html"
+                  class="italic underline text-[#4c5354]"
+                  >Read more</a
+                >
               </p>
             </div>
           </div>
@@ -1263,7 +1287,11 @@
               <p class="font-light">
                 CRM adalah pendekatan pada bisnis yang dipakai oleh perusahaan
                 bertujuan untuk meningkatkan hubungan dengan pelanggan. CRM...
-                <a href="" class="italic underline text-[#4c5354]">Read more</a>
+                <a
+                  href="/atikel/artikel7.html"
+                  class="italic underline text-[#4c5354]"
+                  >Read more</a
+                >
               </p>
             </div>
           </div>
@@ -1296,7 +1324,11 @@
                 UX writer adalah singkatan dari User Experience, yaitu seseorang
                 yang tertugas membuat UX copy di produk digital seperti
                 contohnya...
-                <a href="" class="italic underline text-[#4c5354]">Read more</a>
+                <a
+                  href="/atikel/artikel8.html"
+                  class="italic underline text-[#4c5354]"
+                  >Read more</a
+                >
               </p>
             </div>
           </div>
@@ -1477,5 +1509,21 @@
     <script src="js/main.js"></script>
     <!-- scroll reveal -->
     <script src="js/scrollreveal.js"></script>
+    <script>
+      // Add smooth scrolling to all links inside the navbar
+      document.querySelectorAll("nav a").forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href").substring(1);
+          const targetElement = document.getElementById(targetId);
+
+          window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
   </body>
 </html>
